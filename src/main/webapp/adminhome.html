@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+		
+		 .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:#ff3e6c;
+            z-index: 9999;
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+            margin-top: 51px;
+            font-size: 24px;
+        }
+	</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="productdetails.jsp">Product Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="userdetails.jsp">User Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orderdetails.jsp">Order Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addprodects.jsp">Add Product</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="login.jsp">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+ <div class="overlay" id="overlay">
+        Welcome to the Admin Home Page.!<br>
+    </div>
+
+    <script>
+        // Function to show full-screen overlay
+        function showOverlay() {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'block';
+        }
+
+        // Execute the showOverlay function when the page loads
+        window.onload = function() {
+            showOverlay();
+        };
+    </script>
+  
+
+    <!-- Bootstrap JS (Optional, for Bootstrap features like navbar toggling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
